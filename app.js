@@ -6,7 +6,9 @@ const app = express();
 
 // Middleware pour traiter les requêtes JSON
 app.use(bodyParser.json());
-
+app.get('/', (req, res) => {
+    res.json("Hello, Vercel !")
+})
 // Exemple d'inclusion de routes
 require('./src/routes/readPokedex')(app);
 
@@ -24,6 +26,7 @@ async function startApp() {
         app.listen(PORT, () => {
             console.log(`Serveur démarré sur le port ${PORT}`);
         });
+        
     } catch (error) {
         console.error('Erreur lors du démarrage de l\'application :', error);
         process.exit(1); // Quitte l'application avec un code d'erreur
