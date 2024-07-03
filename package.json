@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-        "dev" : "nodemon app.js",
-        "build": "sequelize db:migrate && sequelize db:seed:all"
+        "dev" : "nodemon app.js"
   },
   "keywords": [],
   "author": "",
